@@ -1,0 +1,14 @@
+{
+"name": "outt.mbtiles",
+"description": "outt.mbtiles",
+"version": "2",
+"minzoom": "0",
+"maxzoom": "12",
+"center": "-75.629883,39.740978,12",
+"bounds": "-75.788638,38.451039,-75.049855,39.839115",
+"type": "overlay",
+"format": "pbf",
+"generator": "tippecanoe v1.34.0",
+"generator_options": "tippecanoe -e outt.mbtiles -zg --drop-densest-as-needed Delaware.geojson",
+"json": "{\"vector_layers\": [ { \"id\": \"Delaware\", \"description\": \"\", \"minzoom\": 0, \"maxzoom\": 12, \"fields\": {} } ],\"tilestats\": {\"layerCount\": 1,\"layers\": [{\"layer\": \"Delaware\",\"count\": 345907,\"geometry\": \"Polygon\",\"attributeCount\": 0,\"attributes\": []}]}}"
+}

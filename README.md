@@ -1,6 +1,7 @@
 # Week 14
 
-*There is no need to clone this repository, today's material is future looking and optional. Although feel free and encouraged clone it to follow along*
+*There is no need to clone this repository. Today's material is beyond the scope of the course. Although feel free and encouraged clone it to follow along and
+use in your final project*
 
 
 ## Class Outline

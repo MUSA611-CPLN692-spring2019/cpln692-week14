@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <title>California Vector Tiles</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id='map'></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoicm9zc2Jlcm5ldCIsImEiOiJRLTh3WEVNIn0.7S-AEC6jsZUhih6bsJ39nA';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/dark-v8',
+      zoom: 13,
+      center: [-122.447303, 37.753574]
+    });
+
+    map.on('load', function() {
+
+      map.addLayer({
+        // Create an ID_na,:
+        "id": "SomeName",
+        "type": "line",
+        "source": {
+          type: 'vector',
+          // Get `Map ID` from your mapbox layer in mapbox studio
+          url: 'mapbox://rossbernet.1asuq50q'
+        },
+        // Use the same layer id:
+        "source-layer": "California",
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": "blue",
+          "line-width": 1
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
